@@ -1,0 +1,41 @@
+{
+  "routeId" : "Workflow_01-wf-route",
+  "categoryId" : "im_accel_studio",
+  "url" : "accel-studio-app/Workflow_01/wf",
+  "method" : "POST",
+  "contentId" : "Workflow_01-wf-content",
+  "contentVersion" : -1,
+  "routeName" : "ワークフロー01 WF画面",
+  "description" : "「シンプルなワークフロー」テンプレートから作成されたWF画面のルーティング定義です。",
+  "sortNumber" : 7,
+  "localizes" : {
+    "zh_CN" : {
+      "routeId" : "Workflow_01-wf-route",
+      "locale" : "zh_CN",
+      "routeName" : "ワークフロー01 WF页面",
+      "description" : "根据「简单的工作流」模板创建的WF页面的路由定义。"
+    },
+    "en" : {
+      "routeId" : "Workflow_01-wf-route",
+      "locale" : "en",
+      "routeName" : "ワークフロー01 WF screen",
+      "description" : "This WF screen routing definition is created from the \"Simple Workflow\" template."
+    },
+    "ja" : {
+      "routeId" : "Workflow_01-wf-route",
+      "locale" : "ja",
+      "routeName" : "ワークフロー01 WF画面",
+      "description" : "「シンプルなワークフロー」テンプレートから作成されたWF画面のルーティング定義です。"
+    }
+  },
+  "preprocesses" : [ {
+    "@class" : "jp.co.intra_mart.foundation.bloommaker.route.BMContentJavaPreprocess",
+    "routeId" : "Workflow_01-wf-route",
+    "className" : "jp.co.intra_mart.system.workflow.bloommaker.preprocessor.WorkflowAuthChecker"
+  }, {
+    "@class" : "jp.co.intra_mart.foundation.bloommaker.route.BMContentLogicFlowPreprocess",
+    "routeId" : "Workflow_01-wf-route",
+    "flowId" : "Workflow_01-get-user-data",
+    "version" : null
+  } ]
+}
